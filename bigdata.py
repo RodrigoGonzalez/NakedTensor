@@ -53,7 +53,7 @@ with tf.Session() as session:
 	session.run(initializer_operation) # Call operator
 
 	_EPOCHS = 10000 # Number of "sweeps" across data
-	for iteration in range(_EPOCHS):
+	for _ in range(_EPOCHS):
 		random_indices = np.random.randint(len(xs), size=_BATCH) # Randomly sample the data
 		feed = {
 			xs_placeholder: xs[random_indices],

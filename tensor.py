@@ -45,7 +45,7 @@ with tf.Session() as session:
 	session.run(initializer_operation) # Call operator
 
 	_EPOCHS = 10000 # number of "sweeps" across data
-	for iteration in range(_EPOCHS):
+	for _ in range(_EPOCHS):
 		session.run(optimizer_operation) # Call operator
 
 	slope, intercept = session.run((m, b)) # Call "m" and "b", which are operators
